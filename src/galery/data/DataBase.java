@@ -16,6 +16,7 @@ public class DataBase {
     public DataBase() throws Exception
    {
       connect();
+
    }
 private void connect() throws  Exception
 {

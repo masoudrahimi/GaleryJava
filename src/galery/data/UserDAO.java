@@ -13,6 +13,7 @@ public class UserDAO {
     {}
     public boolean isExist(String userName,String password) throws Exception
     {
+
         DataBase dataBase = new DataBase();
         Connection connection =dataBase.connection;
         String sql = "SELECT * FROM user WHERE UserName=? AND  Password=?";
