@@ -1,0 +1,706 @@
+/* Theme Name: Phozer
+   Author:Harry
+   Author e-mail: harrynworld@gmail.com
+   Version: 1.0.0
+   Created:February 2015
+   File Description:Main CSS file of the template
+*/
+
+
+/*-------------------------------------------------
+ =  Table of Css
+
+ 1.Reset                             
+ 2.Header                          
+ 3.Home                   
+ 4.About                             
+ 5.Work      
+ 6.Blog / Blog-post                               
+ 7.Contact                            
+
+
+-------------------------------------------------*/
+/* 1 Reset
+----------------------------------------------------------------------------- */
+@font-face {
+    font-family: "Yekan";
+    src: url( "../fonts/W_YEKAN_0.TTF" );
+    src: local( "?" ), url( "../fonts/W_YEKAN_0.TTF" )format( "truetype" );
+}
+*{
+font-family:Yekan;
+}
+html,body {
+    height: 100%;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    color: #535353;
+    background-color: #ffffff !important;
+	direction:rtl;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+ul li {
+    list-style: none;
+}
+*,*:before,*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus {
+    outline: 0 !important;
+}
+iframe {
+    border: none;
+    width:100%;
+}
+a {
+    color: inherit;
+}
+a:hover,a:focus,a:active {
+    text-decoration: none;
+}
+p {
+    color: #737373;
+}
+img {
+    max-width: 100%;
+}
+h1,h2,h3,h4,h5,h6,p {
+    font-family: 'Yekan','Raleway', sans-serif;
+}
+textarea {
+    max-width: 100%;
+}
+.form-control {
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    padding: 6px 12px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 25px;
+    color: #7a7a7a;
+    border: 1px solid #dadada;
+    resize: none;
+    vertical-align: middle;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background: #FFF;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+}
+#container {
+    height: 100%;
+    opacity: 0;
+    transition: all 0.17s ease-in-out;
+    -moz-transition: all 0.17s ease-in-out;
+    -webkit-transition: all 0.17s ease-in-out;
+    -o-transition: all 0.17s ease-in-out;
+}
+#container.active {
+    opacity: 1;
+}
+.preloader {
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    margin-right: -25px;
+    -webkit-backface-visibility: hidden;
+    transition: all 0.17s ease-in-out;
+    -moz-transition: all 0.17s ease-in-out;
+    -webkit-transition: all 0.17s ease-in-out;
+    -o-transition: all 0.17s ease-in-out;
+}
+.preloader img {
+    -webkit-backface-visibility: hidden;
+}
+.btn {
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    border-radius: 0;
+}
+.btn:focus,.btn:active:focus {
+    outline: none;
+    color: #ffffff;
+}
+.btn-custom{
+    border-radius: 3px;
+    padding: 6px 12px 5px;
+    color: #fff;
+    font-weight: 700;
+    -webkit-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #6C6767;
+    border-color: #6C6767;
+	font-family:'Yekan';
+}
+.btn-custom:hover,.btn-custom:focus{
+  color: #fff;
+  background-color: #242b2e;
+  border-color: #242b2e;
+}
+/* Helper */
+#content {
+    position: relative;
+    padding-right: 260px;
+    height: 100%;
+}
+.title {
+    text-transform: uppercase;
+    margin-top: 0px;
+}
+.subtitle {
+    color: #313338;
+    font-family: 'Yekan','Crete Round', serif;
+    font-size: 14px;
+    font-style: italic;
+    letter-spacing: 0px;
+}
+.devider {
+    background-color: #313338;
+    height: 2px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    width: 80px;
+}
+.m-b-lg {
+    margin-bottom: 40px;
+}
+/* Social */
+.social-box {
+    padding: 28px 24px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0px;
+}
+ul.social-icons {
+    padding: 0;
+    margin: 0;
+}
+
+ul.social-icons li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+ul.social-icons li:first-child {
+    margin-right: 0px;
+}
+
+ul.social-icons li a {
+    display: inline-block;
+    margin: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.17s ease-in-out;
+    -moz-transition: all 0.17s ease-in-out;
+    -webkit-transition: all 0.17s ease-in-out;
+    -o-transition: all 0.17s ease-in-out;
+}
+
+ul.social-icons li a.facebook {
+    background: #3e5ea2;
+}
+
+ul.social-icons li a.twitter {
+    background: #2eb0e3;
+}
+
+ul.social-icons li a.github {
+    background: #fff;
+}
+
+ul.social-icons li a.pinterest {
+    background: #f43a2c;
+}
+
+ul.social-icons li a.google {
+    background: #da5f2e;
+}
+
+ul.social-icons li a.youtube {
+    background: #df2826;
+}
+
+ul.social-icons li a.linkedin {
+    background: #107cb7;
+}
+ul.social-icons li a:hover {
+   opacity: 0.7;
+}
+ul.social-icons li a i {
+    color: #fff;
+    font-size: 15px;
+    line-height: 24px;
+    transition: all 0.17s ease-in-out;
+    -moz-transition: all 0.17s ease-in-out;
+    -webkit-transition: all 0.17s ease-in-out;
+    -o-transition: all 0.17s ease-in-out;
+}
+p.copyleft {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+    font-family: 'Yekan','Raleway', sans-serif;
+    font-weight: 300;
+    margin-top: 18px;
+    line-height: 20px;
+}
+
+/*-------------------------------------------------*/
+/*  2. Header
+/*-------------------------------------------------*/
+
+header {
+    display: block;
+    width: 260px;
+    float: right;
+    background-color: #242b2e;
+    text-align: right;
+    z-index: 4;
+    position: relative;
+}
+.logo-box {
+    padding: 30px 30px;
+    background: #f1f1f1;
+    text-align: center;
+}
+.logo h1{
+    margin: 0px;
+    font-family: 'Crete Round', serif;
+    letter-spacing: 0.13em;
+}
+.logo a {
+    color: #111;
+}
+.logo p{
+    font-style: italic;
+    font-family: 'Yekan','Crete Round', serif;
+    font-size: 12px;
+}
+p.slogan {
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    margin: 0;
+    line-height: 30px;
+}
+ul.menu,
+ul.archives,
+ul.categories {
+    padding: 0;
+    margin: 0;
+}
+a.elemadded {
+    display: none;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    padding: 20px;
+    background: #1dc6df;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    transition: all 0.17s ease-in-out;
+    -moz-transition: all 0.17s ease-in-out;
+    -webkit-transition: all 0.17s ease-in-out;
+    -o-transition: all 0.17s ease-in-out;
+}
+ul.menu > li {
+    list-style: none;
+    position: relative;
+}
+ul.menu > li > a,
+ul.drop-down li a {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 14px 24px 14px 30px;
+    color: #fff;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 20px;
+    background-color: #242b2e;
+    transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+}
+ul.menu > li > a i {    
+    vertical-align: middle;
+    font-size: 15px;
+    width: 30px;
+}
+
+ul.menu li a span {
+    position: relative;
+    z-index: 2;
+    vertical-align: middle;
+}
+ul.menu li a:hover:after,
+ul.menu li a.active:after {
+    width: 100%;
+}
+ul.drop-down {
+    position: absolute;
+    top: 0;
+    width: 220px;
+    visibility: hidden\0/;
+    opacity: 0;
+    z-index: 3;
+    text-align: right;
+    right: 100%;
+    transition: all 0.17s linear;
+    -moz-transition: all 0.17s linear;
+    -webkit-transition: all 0.17s linear;
+    -o-transition: all 0.17s linear;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+    -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+    -mos-transition: -mos-transform 0.4s, opacity 0.1s 0.3s;
+    -o-transition: -o-transform 0.4s, opacity 0.1s 0.3s;
+}
+li.drop:hover > ul.drop-down {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: rotateY(0deg);
+      -moz-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      -o-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+      -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+      -moz-transition: -moz-transform 0.4s, opacity 0.1s;
+      -mos-transition: -mos-transform 0.4s, opacity 0.1s;
+      -o-transition: -o-transform 0.4s, opacity 0.1s;
+      transition: transform 0.4s, opacity 0.1s;
+}
+ul.drop-down li {
+    position: relative;
+}
+
+
+/*-------------------------------------------------*/
+/* = 3. Hero/Home
+/*-------------------------------------------------*/
+.home-bg {
+    background-image: url(../images/bg-1.jpg);
+    background-size: cover;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    opacity: 1;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+}
+.home-content {
+    position: absolute;
+    top: 40%;
+    right: 260px;
+    left: 0;
+}
+.home-content .home-text {
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+/*-------------------------------------------------*/
+/* =  4. About
+/*-------------------------------------------------*/
+
+.about-us-section {
+    max-width: 900px;
+    margin: 0px auto;
+    padding: 100px 0px;
+    overflow: hidden;
+    position: relative;
+}
+.about-detail p{
+    max-width: 900px;
+    padding: 0px 20px;
+    margin: 0px auto;
+    line-height: 30px;
+}
+.team {
+    padding:50px 0px;
+}
+.team .member {
+    float: right;
+    width: 50%;
+    overflow: hidden;
+}
+.team .member h5 {
+    font-family: 'Yekan','Crete Round', serif;
+    font-style: italic;
+    color: #999;
+}
+.team .member ul {
+    margin-top: 20px;
+}
+/*-------------------------------------------------------*/
+/*   5. Work
+/*-------------------------------------------------------*/
+.isotope-item {
+    z-index: 2;
+}
+.isotope-hidden.isotope-item {
+    pointer-events: none;
+    z-index: 1;
+}
+.isotope, .isotope .isotope-item {/* change duration value to whatever you like */
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+.isotope {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    transition-property: height, width;
+}
+.isotope .isotope-item {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property:-moz-transform, opacity;
+    transition-property:transform, opacity;
+}
+div.filter-box {
+    padding: 30px 24px;
+    background-color: #fff;
+}
+div.filter-box ul {
+    padding: 0;
+    margin: 0;
+}
+div.filter-box ul li a {
+    display: inline-block;
+    color: #6b7072;
+    font-size: 13px;
+    font-family: 'Yekan','Raleway', sans-serif;
+    line-height: 24px;
+    text-decoration: none;
+    padding: 5px 10px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    transition: all 0.17s ease-in-out;
+    -moz-transition: all 0.17s ease-in-out;
+    -webkit-transition: all 0.17s ease-in-out;
+    -o-transition: all 0.17s ease-in-out;
+}
+div.filter-box ul li a:hover,
+div.filter-box ul li a.active {
+    color: #ffffff;
+}
+.portfolio-box .col-sm-3 {
+    padding: 0px !important;
+    width: 25% !important;
+    margin-left:-4px;
+    margin-top: -3px;
+}
+.portfolio-box .col-sm-4 {
+    padding: 0px !important;
+    width: 33.33% !important;
+    margin-left:-5px;
+    margin-top: -3px;
+}
+.portfolio-box .col-sm-6 {
+    padding: 0px !important;
+    width: 50% !important;
+    margin-left:-7px;
+    margin-top: -5px;
+}
+/* image hover effect */
+.item-img-wrap{
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+.item-img-wrap img{
+    -webkit-transition:all 200ms linear; 
+    -moz-transition:all 200ms linear; 
+    -o-transition:all 200ms linear; 
+    -ms-transition:all 200ms linear; 
+    transition:all 200ms linear; 
+}
+.item-img-overlay{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+}
+.item-img-overlay span{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transition: opacity 250ms linear;
+    transition: opacity 250ms linear;
+}
+.item-img-wrap:hover .item-img-overlay span{
+    opacity: 1;
+}
+.item-img-wrap:hover img{
+    -moz-transform: scale(1.1); 
+    -webkit-transform: scale(1.1); 
+    -o-transform: scale(1.1); 
+    transform: scale(1.1); 
+}
+/*-------------------------------------------------------*/
+/* 6. Blog / Blog-post
+/*-------------------------------------------------------*/
+.blog-page {
+    padding: 80px 0px 0px;
+}
+.img-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+.img-wrapper img {
+    display: block;
+    -o-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.more {
+    text-align: center;
+    top: 50%;
+    right: 0;
+    left: 0;
+    position: absolute;
+    margin-top: -11px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.img-wrapper:hover .img-overlay {
+    opacity: 1;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    -MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+.img-wrapper .img-overlay {
+    opacity: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    -MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    height: 100%;
+    position: absolute;
+    text-decoration: none;
+    width: 100%;
+    top: 0;
+    right: 0;
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    background: rgba(1, 1, 1, 0.85);
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.blog-desc .post-date {
+    text-align: left;
+    margin-bottom: 10px;
+}
+.post-det p{
+    line-height: 24px;
+}
+.comment-list {
+    margin: 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+.comment-list:last-of-type {
+    border-bottom: none;
+}
+.comment-list img {
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    -webkit-border-radius: 32px;
+    float: right;
+    margin-left: 15px;
+}
+.comment-list h5 a{
+    font-weight: 700;
+}
+.comment-list p {
+    overflow: hidden;
+}
+.leave-comm {
+    padding: 50px 0px 80px;
+}
+
+/*-------------------------------------------------------*/
+/* 7. Contact
+/*-------------------------------------------------------*/
+.form-main {
+    padding-top: 30px;
+}
+.error {
+    margin: 8px 0px;
+    display: none;
+    color: red;
+}
+#ajaxsuccess {
+    font-size: 16px;
+    width: 100%;
+    display: none;
+    clear: both;
+    margin: 8px 0px;
+    color: #1dc6df;
+}
+#contact textarea.form-control{
+    height: 120px;
+}
+

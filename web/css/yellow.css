@@ -1,0 +1,9 @@
+
+ul.menu > li a:hover,ul.drop-down li a:hover,.menu a.active ,
+div.filter-box ul li a:hover,div.filter-box ul li a.active,
+a.elemadded{
+    background-color: #Fbce43 !important;
+}
+.item-img-overlay span{
+    background: url(../images/plus.png) no-repeat center center rgba(251, 206, 67, 0.7);
+}
